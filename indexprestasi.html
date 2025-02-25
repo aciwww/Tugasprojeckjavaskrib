@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan percabangan</title>
+</head>
+<body>
+    <form action="method=post" onsubmit="return false">
+        Masukkan nama <input type="text" id="nama"><br>
+        Masukkan nilai <input type="text" id="nilai"><br>
+        <button onclick="cek()">Cek status</button>
+    </form>
+    <p id="hasil"></p>
+    <script>
+        function cek () {
+            let nama = document.getElementById('nama').value 
+            let nilai = document.getElementById('nilai').value 
+            if (nilai  > 90) {
+                document.getElementById('hasil').innerHTML = `${nama}, Selamat anda mendapatkan predikat A`
+            } else if (nilai > 80) {
+                  document.getElementById('hasil').innerHTML = `${nama}, Selamat anda mendapatkan predikat B`
+            } else if (nilai > 70){
+                  document.getElementById('hasil').innerHTML = `${nama}, Selamat anda mendapatkan predikat c`
+            } else if (nilai > 60) {
+                  document.getElementById('hasil').innerHTML = `${nama}, Selamat anda mendapatkan predikat D`
+            } else {
+                  document.getElementById('hasil').innerHTML = `${nama}, Selamat anda mendapatkan predikat E`
+            }
+        }
+    </script>

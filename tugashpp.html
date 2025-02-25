@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menghitung HPP</title>
+</head>
+<body>
+    <h1>aplikasi pembayaran fotocopy</h1>
+    pilih anggota
+    <form onsubmit="return false">
+        <select name="status" id="status">
+            <option value="pelanggan">pelanggan</option>
+        </select>
+
+        jumlah fotocopy <input type="number" id="jumlah"><br>
+        <button onclick="hitung()">Hitung Total Bayar</button>
+    </form>
+    <p id="hasil"></p>
+    <script>
+        function hitung() {
+            let status = document.getElementById('status').value 
+            let jf = document.getElementById('jumlah').value 
+
+            if (status == 'pelanggan') {
+                HP = 75
+            } else {
+                if (jf <= 100) {
+                    HP = 100
+                } else {
+                    HP = 85
+                }
+            }
+            let TH = jf * HP 
+            document.getElementById('hasil').innerHTML='status : $(status) <br>
+            jumlah fotocopy : ${JF} <br>
+            Total pembayaran : $(TH)'
+        }
+    </script>
+
+    
+</body>
+</html>

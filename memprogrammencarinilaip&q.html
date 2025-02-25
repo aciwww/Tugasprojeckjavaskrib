@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan percabangan</title>
+</head>
+<body>
+  <form action="method=post" onsubmit="return false">
+   Masukan x <input type="text"  id="x"><br>
+  Masukan y <input type="text" onchange="q()" id="y"><br>
+    
+    </form>
+    <p id="p"></p>
+    <p id="q"></p>
+    <script>
+      function q() {
+        let x = parseInt(document.getElementById('x').value)
+        let y = parseInt(document.getElementById('y').value)
+        let p = x + y
+        document.getElementById('p').innerHTML = " jadi nilai p"+ p
+        if (p >= 0) {
+           q = x * y
+        } else {
+           q = x / y
+        }
+       document.getElementById('q').innerHTML = " jadi nilai q" + q
+      }
+    </script>
+    
+     
+    
+   
+ 
+</body>
+</html>
